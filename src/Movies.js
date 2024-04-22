@@ -141,10 +141,10 @@ export default function Movies() {
                         </div>
                         <div className="col col-5" data-label="Genres">{mo.genres.join(", ")}</div>
                         <div className="col col-6" data-label="Delete">
-                            <Button to={`deleteMovie/${mo.id}`} ><DeleteOutlineIcon /></Button>
+                            <Button><Link to={`deleteMovie/${mo.id}`}><DeleteOutlineIcon /></Link></Button>
                         </div>
                         <div className="col col-7" data-label="Edit">
-                            <Button color="error"  onClick={() => { dispatch(editMov(mo.id)); navigate(`/movie/${mo.id}`) }}>
+                            <Button color="error" onClick={() => { dispatch(editMov(mo.id)); navigate(`/movie/${mo.id}`) }}>
                                 <EditIcon />
                             </Button>
                         </div>
